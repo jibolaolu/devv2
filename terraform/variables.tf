@@ -26,6 +26,12 @@ variable "az_count" {
   description = "Number of availability zones to use"
   default     = 2
 }
+variable "desired_container_instances" {
+  description = "desired number of containers"
+  default     = 2
+}
+
+
 
 variable "repository_name" {
   default     = "node-hello-world"
