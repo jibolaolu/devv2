@@ -1,19 +1,19 @@
 variable "region" {
-  default = "eu-west-1"
+  default = "eu-west-2"
 }
 
 variable "managed_by" {
-  default     = "terraform"
+  default     = "seannyeagles"
   description = "terraform"
 }
 
 variable "app_name" {
-  default     = "node-hello-world"
+  default     = "seanyreport"
   description = "Name of the application"
 }
 
 variable "environment" {
-  default     = "dev"
+  default     = "prod"
   description = "Name of the environment. e.g. prod, qa, dev"
 }
 
@@ -34,7 +34,7 @@ variable "desired_container_instances" {
 
 
 variable "repository_name" {
-  default     = "node-hello-world"
+  default     = "seannyrepo"
   description = "Name for Docker repo"
 }
 // SNS Variables
@@ -42,7 +42,7 @@ variable "sns_ecs_topic" {
   default    =  "ecs_sink"
 }
 variable "alarms_email" {
-  default     = "shegoj@yahoo.com"
+  default     = "seun_2006@yahoo.com"
   description = "SNS Email Sink"
 }
 

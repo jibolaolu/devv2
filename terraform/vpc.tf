@@ -6,7 +6,7 @@ resource "aws_vpc" "vpc" {
   enable_dns_support   = true
 
   tags = {
-    name        = "${var.app_name}-${var.environment}-vpc"
+    Name        = "${var.app_name}-${var.environment}-vpc"
     environment = "${var.environment}"
     managed_by  = "${var.managed_by}"
   }
@@ -16,7 +16,7 @@ resource "aws_internet_gateway" "ig" {
   vpc_id = "${aws_vpc.vpc.id}"
 
   tags = {
-    name        = "${var.app_name}-${var.environment}-ig"
+    Name        = "${var.app_name}-${var.environment}-ig"
     environment = "${var.environment}"
     managed_by  = "${var.managed_by}"
   }
@@ -41,7 +41,7 @@ resource "aws_subnet" "public" {
   map_public_ip_on_launch = false
 
   tags = {
-    name        = "${var.app_name}-${var.environment}-public-subnet-${count.index}"
+    Name        = "${var.app_name}-${var.environment}-public-subnet-${count.index}"
     environment = "${var.environment}"
     managed_by  = "${var.managed_by}"
   }
@@ -55,7 +55,7 @@ resource "aws_subnet" "private" {
   map_public_ip_on_launch = false
 
   tags = {
-    name        = "${var.app_name}-${var.environment}-private-subnet-${count.index}"
+    Name        = "${var.app_name}-${var.environment}-private-subnet-${count.index}"
     environment = "${var.environment}"
     managed_by  = "${var.managed_by}"
   }
@@ -71,7 +71,7 @@ resource "aws_route_table" "public" {
   }
 
   tags = {
-    name        = "${var.app_name}-${var.environment}-public-routes"
+    Name        = "${var.app_name}-${var.environment}-public-routes"
     environment = "${var.environment}"
     managed_by  = "${var.managed_by}"
   }
@@ -87,7 +87,7 @@ resource "aws_route_table" "private" {
   }
 
   tags = {
-    name        = "${var.app_name}-${var.environment}-private-routes"
+    Name        = "${var.app_name}-${var.environment}-private-routes"
     environment = "${var.environment}"
     managed_by  = "${var.managed_by}"
   }

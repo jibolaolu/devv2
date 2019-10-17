@@ -35,7 +35,7 @@ then
     echo ""
 elif [ "$ARG" = "destroy" ]
 then
-    echo "Destroying ALL Terraform Infrastructure. This cannot be undone. You can 5 seconds to cancel (CTRL-C)!"
+    echo "Destroying ALL Terraform Infrastructure. This cannot be undone. You have 5 seconds to cancel press (CTRL-C)!"
     sleep 5
     cd terraform && terraform destroy -auto-approve
     echo "Destroy completed."
